@@ -1,0 +1,153 @@
+<!--
+------------------------------
+-  ACCUEIL / page principal  -
+------------------------------ 
+                           -->
+
+    <!-- ------------------------------ Header / Nav ---------------------------- -->
+    <header class="header">
+      <section class="navbox">
+        <nav class="navbar container">
+          <a href="index.php"><img src="imgs/logoResto-bis2.png" alt="Logos restaurant" class="logo"></a> 
+          <div class="navbar-link">
+            <!-- <a href="index.php" class="active">Vous êtes ICI</a> -->
+            <a href="index.php" class="active">Accueil</a>
+            <a href="#menus">Carte & Menus</a> 
+            <a href="#event">Vos Evénements</a> <!-- page à créer Formulaire-->
+            <a href="add_booking.php">Réservation</a> <!-- page à créer Formulaire -->
+            <!-- <a href="atualite.html">Actualité</a> -->
+            <a href="#map">Map</a>
+            <a href="#photos">Photos</a> <!-- page à créer ? faire grossir l'image dans la fenêtre -->
+            <a href="#goldBook.html">Livre d'Or</a> <!-- page à créer Livre d'or -->
+          </div>
+        </nav>
+      </section>
+    </header>
+    <!-- ---------------------------------- Main -------------------------------- -->
+    <main>
+      <!-- Title -->
+      <header class="main-header-bcg">
+        <section class="container main-title">
+          <p>Restaurant pour sourd et malentendant</p>
+          <h1><!--l'Effet Mer - -->Aux Six Reines</h1>
+          <h2 class="sub-border"><span>Gastronomie Française</span></h2> 
+          <p>Gironde en Bord'Eau</p> 
+        </section>
+      </header>
+      
+      <!-- --------------------------- Presentation ----------------------------- --> 
+      <section class="presentation bck-white" id="menus">
+        <article class="box-left container">
+          <h3 class="title-section">Votre <span>Restaurant</span></h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere earum aliquam, explicabo ex est veritatis deleniti minima, velit, eaque ut sapiente iure similique eius incidunt excepturi cupiditate officia accusamus blanditiis!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere repudiandae nostrum eum deleniti ducimus omnis odit aperiam quae vel cumque tenetur voluptas in a laboriosam ullam, architecto dolorem consequuntur rerum.</p>
+          <img src="imgs/Cliparts/chefMenu-b.png" alt="image de chef qui tient le menu" class="imgMenuChef"><a href="menus.html">Menu</a> 
+          
+          <!-- Slider -->
+          <div id="slider" class="slider box-right">
+            <img src="" alt="Photo du carrousel" />
+            <ul>
+              <li><button id="slider-play" class="button-play" title="Démarrer le carrousel"><i class="fas fa-play"></i></button></li>
+            </ul>
+          </div>
+        </article>  
+      </section>
+      
+      <!-- ----------------------------- Location ------------------------------- -->
+      <section class="location bck-black" id="location">
+        <article class="container ">
+          <h3 class="title-section">En Bord <span>de mer</span></h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates ipsa consequatur nisi nesciunt in porro quaerat sequi possimus, provident aspernatur necessitatibus ipsum at dolorum adipisci amet eligendi facilis? Esse, excepturi?</p>
+          <a href="#map" class="cta"><i class="fas fa-map-marker-alt"></i>Nous situer</a>
+        </article>
+      </section>
+      
+      <!-- --------------------------- Photos Gallerie -------------------------- -->
+      <section class="photos bck-white" id="photos">
+        <article class="container box-photos">
+          <img src="imgs/Cliparts/appareil-photo.png" alt="icone appareil photo" class="logo-app">
+          <h3 class="title-section">Quelques Photos</h3>
+          <div class="photos-items">
+            <a href="#"><img src="imgs/Photos/Gallery/huitres1-s.jpg" alt="Huitres chaudes"/></a>
+            <a href="#"><img src="imgs/Photos/Gallery/entree1-s.jpg" alt="Salade Royal"/></a>
+            <a href="#"><img src="imgs/Photos/Gallery/poiss1-s.jpg" alt="Filetde bar"/></a>
+            <a href="#"><img src="imgs/Photos/Gallery/stJacques1-s.jpg" alt="Noix de St-Jacques"/></a>
+            <a href="#"><img src="imgs/Photos/Gallery/viande3-s.jpg" alt="Cotes d'agneau"></a>
+            <a href="#"><img src="imgs/Photos/Gallery/dess2-s.jpg" alt="Fondant au chocolat"/></a>
+            <!--<a href="#"><img src="imgs/Photos/salle_1.jpg" alt="Salle Aquarium"/></a>
+            <a href="#"><img src="imgs/Photos/salle.jpg" alt="Salle Vintage"/></a>-->
+          </div>
+          <a href="#"><i class="fas fa-plus-circle"></i></a> <!-- AUTRE PAGE A FAIRE -->
+        </article>
+      </section>
+      
+      <!-- ------------------------------ Actuality ----------------------------- -->
+      <section class="actuality bck-black">
+        <article class="container">
+          <h3 class="title-section">Notre <span>Actualité</span></h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates ipsa consequatur nisi nesciunt in porro quaerat sequi possimus, provident aspernatur necessitatibus ipsum at dolorum adipisci amet eligendi facilis? Esse, excepturi?</p>
+          <a href="#actuality.html" class="cta"><i class="fab fa-facebook-square"></i>Nous Rejoindre</a>
+        </article>
+      </section>
+      
+      <!-- ------------------------------- Booking ------------------------------ -->
+      <section class="booking bck-white" id="map">
+        <section class="container">
+          <article class="box-left">
+            <!-- <img src="imgs/Photos/salle_2Bis.jpg" alt="salle élégante"> -->
+            <video controls="controls" class="annonceVideo">
+              <source src="video/annonce-video.mp4" poster="video/annonceVideo.jpg" type="video/mp4" controls/>
+            </video>
+            <p><i class="fas fa-map-marker-alt">Adresse compléte</i></p>
+          </article>
+          <!-- Box-right -->
+          <article class="box-right" id="booking">
+            <h4 class="title-section" >Réservez<span> Votre table</span></h4> <!-- a mettre en h4 -->
+            <p>Votre restaurant est heureux de vous accueillir : </p>
+            <p>du <span>lundi au dimanche</span> de <span>12:00 à 13:30</span> et de <span>19:00 à 21:30</span></p>
+            <!-- Phone -->
+            <div class="phone">
+              <p><img src="imgs/Cliparts/smartphone.png" alt="smartphone">06.00.00.00.00</p>
+              <p><a href="add_booking.php"><i class="far fa-calendar-alt"></i>Réservation en ligne</a></p> <!-- AUTRE PAGE A FAIRE -->
+            </div>
+          </article>
+          <!-- Map -->
+          <aside class="map">
+            <iframe class="mapGoogle" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.4475910134124!2d2.3096039398748993!3d48.8687433911748!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66fc50dc75ccf%3A0x42f0f4fa01438416!2sFranklin+D.+Roosevelt!5e0!3m2!1sfr!2sfr!4v1510692766036"></iframe>
+          </aside>
+        </section>
+      </section>
+      
+      <!-- -------------------------------- Event ------------------------------- -->
+      <section class="event bck-black" id="event">
+        <article class="container">
+          <h3 class="title-section">Vos <span>événements</span></h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium laborum quis, ducimus animi porro quasi, magnam officia facilis alias totam obcaecati esse, eius officiis recusandae reprehenderit quo aspernatur eos? Aliquam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam inventore fugiat reprehenderit quae blanditiis, quaerat.</p>
+          
+          <img src="imgs/Cliparts/DecoTexte_2.png" alt="Decoration"/>
+          
+          <p>Pour plus de renseignements contactez,<span class="nom"> Lord Brett Sinclair</span> au : <img src="imgs/Cliparts/smartphone2.png" alt="icone smartphone" /><span>08 00 00 00 00</span></p>
+          
+          <a href="event.html" class="cta"><i class="far fa-envelope"></i>Contact en Ligne</a>
+        </article>
+      </section>
+    </main>  
+    <!-- --------------------------------- Fin du Main -------------------------- -->
+    
+    
+    <!-- Footer 1 -->
+    <footer class="footer">
+      <section class="container footer-head">
+        <h2>Aux Six Reines. Gatronomie Française, Gironde en Bord' Eau</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit : <span>08 00 00 00 00</span>. Laudantium quas, facere laborum.</p>
+        <div class="socialNetwork">
+          <p>Rejoignez nous sur les réseaux sociaux</p>
+          <a href="#"><i class="fab fa-facebook-square"></i></a>
+          <a href="#"><i class="fab fa-twitter-square"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </section>
+    </footer>
+    
+    <script src="js/slider/slider.js"></script>
+    
+    

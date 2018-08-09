@@ -1,0 +1,198 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.nav-bar {
+ text-align: right;
+}
+
+.navbarLink a {
+  padding: 15px;
+}
+
+.form-bcg {
+  /*align-items: start;*/
+  background-image: url('../imgs/reser1-sb.jpg');
+  background-position: center center;
+  /*min-height: 100vh;*/
+  height: 1300px;
+  /*background-attachment: scroll;*/
+}
+
+.form-box,
+form {
+  display: flex;
+  flex-direction: column;
+  align-self: start;
+  width: 100%;
+}
+
+.civility-items {
+  /* display: flex; 
+  flex-direction: row; 
+  justify-content: space-between; */
+}
+
+.civility-items #civility {
+  align-items: end;
+  background-color: rgba(0, 0, 0, 0.7);
+  font-size: 1.2rem;
+  padding: 5px;
+  color: white;
+  text-shadow: 1px 1px 1px #111;
+}
+
+.civility-items #familyname {
+  text-transform: uppercase;
+}
+
+form input, 
+.booking-day .selectBox,
+.booking-time .selectBox {
+  width: 100%;
+  font-weight: normal;
+  padding: 5px 5px 5px 50px;
+  margin-bottom: 30px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: magenta;
+  border-bottom: transparent;
+  border-right: transparent;
+  border-top: 1px solid #333;
+  border-left: 1px solid #333;
+  box-shadow: 2px 2px 2px white;
+  font-size: 1.2rem;
+}
+
+form ul li div input#important {
+  font-size: 1rem;
+  padding: 7px 5px 6px 5px;
+  color: silver;
+}
+
+.civility-items input {
+  width: calc(30% - 2px);
+  padding: 5px;
+}
+
+.form-box .form-title {
+  font-size: 4rem;
+  margin-top: 115px;
+  margin-bottom: 40px;
+  align-self: start;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px #cf52f8;
+  color: purple;
+}
+
+form label {
+  display: block;
+  text-align: center;
+  font-size: 1.5rem;
+  margin-left: 50px;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 2px black;
+  background-color: rgba(128, 0, 128, 0.5);
+  border-radius: 10px 10px 0 0;
+  padding: 3px;
+  width: 224px;
+}
+
+/*form input, 
+.booking-day .selectBox,
+.booking-time .selectBox {
+  width: 100%;
+  font-weight: normal;
+  padding: 5px 5px 5px 50px;
+  margin-bottom: 30px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: magenta;
+  border-bottom: transparent;
+  border-right: transparent;
+  border-top: 1px solid #333;
+  border-left: 1px solid #333;
+  box-shadow: 2px 2px 2px white;
+  font-size: 1.2rem;
+}*/
+
+form input {
+  display: inline-block;
+}
+
+.selectBox select {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: magenta;
+  border: 0;
+  cursor: pointer;
+}  
+
+.selectBox select option {
+  background-color: indigo;
+}
+
+form button {
+  align-self: center;
+  padding: 15px;
+  margin-top: 30px;
+  background-color: darkviolet;
+  text-shadow: 1px 1px 1px #222;
+  letter-spacing: 1px;
+  font-size: 1.1rem;
+  color: silver;
+}
+
+form button:hover {
+  cursor: pointer;
+  background-color: magenta;
+  text-transform: uppercase;
+  border-radius: 10px;
+  color: white;
+}
+
+.attention {
+  margin-top: 20px;
+  text-align: center;
+  background-color: darkviolet;
+  color: white;
+} 
+
+/* 
+.attention img {
+  float: left;
+  margin-top: 9px;
+  padding: 0 0 0 11px;
+}
+*/
+
+.attention img { /* panneau */
+  float: left;
+  width: 125px;
+  margin-top: 20px;
+  margin-left: 60px; 
+}
+
+.attention p {
+  color: white;
+  font-size: 1.4rem;
+  padding: 0 0 5px 0;
+  text-transform: lowercase;
+  /*text-shadow: 1px 1px 1px white;*/
+}
+
+.attention p:nth-of-type(2):first-letter {
+  text-transform: capitalize;
+}
+
+.attention p span {
+  text-transform: uppercase;
+  font-weight: bold;
+  border: 2px yellow solid;
+  padding: 2px 5px;
+  color: gold;
+}
+
+
+
+

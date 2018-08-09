@@ -1,0 +1,81 @@
+*
+{
+  box-sizing: border-box;
+  outline: none; /* enleve le halo bleu */
+}
+
+body
+{
+  /* margin: 0 auto; */
+  overflow-y: scroll;
+  /* width: 100%; */
+}
+
+img {
+  max-width: 100%;
+}
+
+.slider
+{
+  -webkit-backface-visibility: hidden; /* obligatoire pour éviter l'effet de crénelage sous Chrome */
+  /*text-align: center;*/
+}
+
+.slider img
+{
+  border-radius: 6px;
+  box-shadow: 0 0 8px 2px black;
+  width: 70%;
+  height: auto;
+}
+
+.slider ul
+{
+  /* margin: -260px 0 0 0; */
+  /* width: 100%; */
+  list-style-type: none;
+  /*text-align: center;*/
+  padding: 0;
+}
+
+.slider ul li
+{
+  display: inline-block;
+}
+
+.slider i {
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 2px 10px;
+  border-radius: 5px;
+  font-size: 18px;
+  text-shadow: 1px 1px 1px white;
+}
+
+.slider ul li i:hover {
+  color: orangered;
+  text-shadow: 1px 1px 1px #000;
+  cursor: pointer;
+}
+
+.slider ul li i:active {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+button {
+  background-color: transparent;
+  border: none; 
+  position: relative;
+}
+
+.button-play i {
+  /*position: absolute;
+  bottom: 32px;
+  left: -410px; */
+  align-self: left;
+  padding: 5px;
+  border: 1px solid silver;
+  
+}
+

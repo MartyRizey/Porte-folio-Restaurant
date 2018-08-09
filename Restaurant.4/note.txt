@@ -1,0 +1,60 @@
+Le 23/01/2018
+-------------
+
+  Inspiration du fichier : add_booking.php     -> add_post.php ------------- du Blog version 4 
+                         : bookingConfirm.php  -> index.php ----------------
+  
+  
+  - Créer un template pour l'affichage de la confirmation de réservation.
+    └> nom du fichier : bookingConfirm.php et bookingConfirm.phtml
+
+
+
+
+
+
+A faire
+=======
+    └> Livre d'or -> autre page (formulaire, utiliser autre façon pour stocker que la BDD (localstorage) ??)
+    └> Vos événements -> btn Contact en ligne -> formulaire autre page
+    └> Photos -> btn '+' -> autre page avec autres photos que l'on peut agrandir (JS ??)
+    └> Menus & Cartes -> autre page  
+    
+    - Pensez au média Queries pour le responsive (tablette et téléphone)
+
+
+Suggestions :  
+=============
+    └> GENERALITE :  
+    |  ------------
+    |  - Changer les fontes ou pas ?
+    |  - Changer les couleurs (gold et orangered)
+    |
+    └> FORMULAIRE RESERVATION : -> add_booking.php et phtml
+    |  ------------------------
+    |  - Mettre l'heure et les minutes du service avec des balises <select> dans le formulaire de réservation, ou limiter la
+    |    plage horaire de la réservation en php.
+    |  - Le champ input du nombre de personnes dans le formulaire de réservation doit être de 1 minimum.
+    |
+    └> CONFIRMATION DE RESERVATION : -> bookingConfirm.php et phtml
+    |  -----------------------------
+    |  - afficher la bonne réservation
+    |   
+    └> SQL : -> table Bookings
+    |  -----
+    |  - Voir à changer le nombre de la civilité en string.
+    | 
+    |
+    └> CHECKED / Problème avec la taille dans mon champ input en HTML du téléphone.
+       CHECKED / Bugg à corriger sur le formulaire de Réservation : au zoom de la page problème avec le footer    
+       CHECKED / Liens dans la nav sur le formulaire de réservation pas actifs
+       CHECKED / Ajout éventuel d'un champ date actuel dans la BDD via la function NOW() dans VALUES (?, ?, ?, NOW()); de la       requête
+       CHECKED / Séparer le nom et le prénom dans les fomulaires et mettre la Civilité (Mr, Mme, Mlle) balise <select>
+       
+       
+        
+ --------------------------       
+ - Questions pour olivier -
+ --------------------------
+
+  

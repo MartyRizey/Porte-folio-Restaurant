@@ -1,0 +1,151 @@
+<!-- 
+--------------------------------
+-  Formulaire de réservation   -
+-------------------------------- 
+                           -->
+
+<!-- ------------------------------ Header / Nav ---------------------------- -->
+    <header class="header">
+      <section class="navbox">
+        <nav class="nav-bar navbar container">
+          <a href="index.php"><img src="imgs/logoResto-bis2.png" alt="Logos restaurant" class="logo"></a> 
+          <div class="navbarLink navbar-link ">
+            <!-- <a href="index.php" class="active">Vous êtes ICI</a>-->
+            <!-- <a href="index.php" class="hide">Accueil</a> -->
+            <a href="#menus">Carte & Menus</a> 
+            <!-- <a href="#event">Vos Evénements</a> <!-- page à créer Formulaire-->
+            <a href="#booking" class="active">Réservation</a> <!-- page à créer Formulaire -->
+            <!-- <a href="atualite.html">Actualité</a> -->
+            <a href="index.php#map">Map</a>
+            <!-- <a href="#photos">Photos</a> <!-- page à créer ? faire grossir l'image dans la fenêtre -->
+            <a href="#goldBook">Livre d'Or</a> <!-- page à créer Livre d'or -->
+          </div>
+        </nav>
+      </section>
+    </header>
+    
+    <!-- Title -->
+    <header class="form-bcg main-header-bcg">
+      <section class="container form-box main-title">
+        <h1 class="form-title">Réservez votre table en ligne</h1>
+        
+        <form method="POST" action="add_booking.php">
+          <ul>
+            <!--<li>
+              <!-- A mettre sous forme de balise <select> avec la civilité / nom / prenom . Comme la date
+              <label for="nom">Votre nom</label> 
+              <input type="text" name="name" id="nom" required />
+            </li>  -->
+            
+            <li class="civility-box">
+              <label for="civility">Civilité</label>
+              <div class="selectBox civility-items">
+                <select id="civility" name="civility">
+                  <?php foreach($civilitys as $index => $civility): ?>
+                    <option value="<?= $index ?>"><?= $civility ?></option>
+                  <?php endforeach; ?>
+                </select>
+                <input type="text" name="familyname" id="familyname" placeholder="Votre nom" required />
+                <input type="text" name="firstname" id="firstname" placeholder="Votre prénom" required />
+                <input type="text" name="important" id="important" placeholder="precisions" />
+              </div>
+            </li>
+            
+            <li>
+              <label for="email">Votre e-mail</label>
+              <input type="mail" name=email id="email" required />
+            </li>
+            
+            <li>
+              <label for="phone">Téléphone</label>
+              <input type="text" name="phone" id="phone" maxlength="10" required />
+            </li>
+            
+            <!-- --------------------- Date de réservation ----------------------- -->
+            <li class="booking-day">
+              <label for="booking_day">Date de réservation</label>
+              <div class="selectBox">
+                <select id="booking_day" name="bookingDay" required >
+                  <?php for($day = 1; $day <= 31; $day++): ?>
+                    <option value="<?= $day; ?>"><?= $day ?></option>
+                  <?php endfor; ?>
+                </select>
+              
+                <select name="bookingMonth" required> <!-- Tableau dans add_booking.php -->
+                  <?php foreach($months as $index => $month): ?>
+                    <option value="<?= $index +1 ?>"><?= $month ?></option>
+                  <?php endforeach; ?>
+                </select>
+                
+                <select name="bookingYear" required >
+                  <?php for($year = 2017; $year <= date('Y') + 15; $year++): ?>
+                    <option value="<?= $year; ?>"><?= $year; ?></option>
+                  <?php endfor; ?>
+                </select>
+              </div>
+              <!--<label for="date">Date de la réservation : </label>
+              <input type="date" name="date" id="date" required />-->
+            </li>
+            <!-- -------------------- Fin date de réservation -------------------- -->
+            
+            <!-- <li>
+              <label for="time">Heure de réservation</label>
+              <input type="text" name="booking_Hour" id="time" placeholder="Entrer votre heure d'arrivée" required />
+            </li> -->
+            
+            <li class="booking-time">
+              <label for="bookingTime">Heure de réservation</label>
+              <div class="selectBox">
+                <select id="booking-time" name="bookingHour" required >
+                  <optgroup label="Déjeuner">
+                    <?php for($hour = 12; $hour <= 13; $hour++): ?>
+                      <option value="<?= $hour ?>"><?= $hour . ' H' ?></option>
+                    <?php endfor; ?>
+                  </optgroup>
+                  
+                  <optgroup label="Diner">
+                    <!-- <select id="booking-time" name="bookingHour_S"> -->
+                    <?php for($hour = 19; $hour <= 20; $hour++): ?>
+                      <option value="<?= $hour ?>"><?= $hour . ' H' ?></option>
+                    <?php endfor; ?>
+                  </optgroup>
+                </select>
+               
+                <select name="bookingMinutes" required>
+                  <?php for($minutes = 00; $minutes <= 45; $minutes+=15): ?>
+                    <option value="<?= $minutes ?>"><?= $minutes.' Min' ?></option>
+                  <?php endfor; ?>
+                </select>
+                
+              </div>
+            </li>
+            
+            <li>
+              <label for="nbrPeople">Nombre de personnes</label>
+              <input type="text" name="nbrPeople" id="nbrPeople" maxlenght="2" placeholder="Pour combien de personnes souhaitez-vous réserver ?" required />
+            </li>
+          </ul>  
+          
+          <div class="attention">
+            <!-- <img src="imgs/Cliparts/attention_L.png" alt="logo warning" /> -->
+            <img src="imgs/Cliparts/attention.png" alt="logo warning" />
+            <p><span>Attention</span> tout formulaire mal complété ou avec des erreurs, <br>ex: faux numéro ou numéro non complet, faux email, heure de réservation en dehors des heures de service, <br>jour de fermeture, ne sera pas prix en compte et cela même si vous le valider.
+            </p>
+            <p>Nous pouvons avoir besoin de vous rappelez, pour des précisions et afin de mieux vous servir.</p>
+          </div>  
+          
+          
+          <a href="bookingConfirm.php?PostId=<?= intval($post['Id']) ?>"><button class="button btn-submit-form" type="submit">Valider</button></a>
+          
+        </form>
+        
+        <!-- <h1>Aux Six Reines</h1> 
+        <h2>Gastronomie Française</h2> 
+        <p>Gironde en Bord'Eau</p> -->
+      </section>
+    </header>
+    
+    
+     
+    
+    

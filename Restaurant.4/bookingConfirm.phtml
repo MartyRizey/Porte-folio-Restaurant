@@ -1,0 +1,57 @@
+<!-- 
+----------------------------------------------
+-  Validation du formulaire de réservation   -
+-      Envoyez par le add_booking.php        -
+---------------------------------------------- 
+                                           -->
+
+<!-- ------------------------------ Header / Nav ---------------------------- -->
+    <header class="header">
+      <section class="navbox">
+        <nav class="nav-bar navbar container">
+          <a href="index.php"><img src="imgs/logoResto-bis2.png" alt="Logos restaurant" class="logo"></a> 
+          <div class="navbarLink navbar-link ">
+            <!-- <a href="index.php" class="active">Vous êtes ICI</a>-->
+            <!-- <a href="index.php" class="hide">Accueil</a> -->
+            <a href="#menus">Carte & Menus</a> 
+            <!-- <a href="#event">Vos Evénements</a> <!-- page à créer Formulaire-->
+            <a href="#booking" class="active">Réservation</a> <!-- page à créer Formulaire -->
+            <!-- <a href="atualite.html">Actualité</a> -->
+            <a href="#map">Map</a>
+            <!-- <a href="#photos">Photos</a> <!-- page à créer ? faire grossir l'image dans la fenêtre -->
+            <a href="#goldBook.html">Livre d'Or</a> <!-- page à créer Livre d'or -->
+          </div>
+        </nav>
+      </section>
+    </header>
+    
+    <!-- MAIN Title -->
+    <header class="form-bcg main-header-bcg">
+      <section class="container form-box main-title">
+        <h1 class="form-title">Confirmation de Réservation</h1>
+        <?php // foreach($bookings as $booking): ?>
+        
+          <h2>Réservation n° : <?= htmlspecialchars($bookings['Id']) ?></h2> <!-- Récupérer Id aussi -->
+          
+          <article class="confirm-box-items">
+            
+            <p>Civilité : <?= htmlspecialchars($bookings['Civility']) ?></p>
+            <p>Nom : <?= htmlspecialchars($bookings['Familyname']) ?></p>
+            <p>Prenom : <?= htmlspecialchars($bookings['Firstname']) ?></p>
+            <p>Vous avez réservé une table pour le :  <?= htmlspecialchars($bookings['Booking_Date']) ?></p>
+            <p>Vous arriverez à : <?= htmlspecialchars($bookings['Booking_Time']) ?></p> <!-- attention -->
+            <p>Nombre de personnes : <?= htmlspecialchars($bookings['Number_People']) ?></p>
+            
+          </article>
+        <?php // endforeach ?>
+        
+        <a href="index.php" class="button cta">Accueil</a> <!-- renverra à la page d'accueil -->
+        
+        
+      </section>
+      
+      
+        
+        <!-- http://sohtanaka.developpez.com/tutoriels/javascript/creez-fenetre-modale-avec-css-et-jquery/ -->
+        <!-- http://www.trucsweb.com/tutoriels/css/css-modal/ -->
+        <!-- http://dmouronval.developpez.com/tutoriels/css/fenetre-modale-css3/#noWhere -->
